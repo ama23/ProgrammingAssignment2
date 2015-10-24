@@ -5,11 +5,11 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     i <- NULL
-    set <- function(y) {
+    set <- function(y) { 
         x <<- y
-        i <<- NULL
+        i <<- NULL 
     }
-    get <- function() x
+    get <- function() x 
     setinverse <- function(solve) i <<- solve
     getinverse <- function () i
     list(set = set, get = get,
@@ -22,7 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
           i <- x$getinverse()
-          if(!is.null(i)) {
+          if(!is.null(i)) { #logical statement
                     message("getting cached data")
                     return(i)
           }
