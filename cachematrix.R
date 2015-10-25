@@ -26,7 +26,7 @@ makeCacheMatrix <- function(x = matrix()) {  #Defines the main input of "makeCac
 ### The cacheSolve function returns the inverse of the matrix inputed in the "makeCacheMatrix" function.
 ### 
 
-cacheSolve <- function(x, ...) { # The input is the object used to store the "makeCacheMatrix" function and its associated main matrix.
+cacheInverse <- function(x, ...) { # The input is the object used to store the "makeCacheMatrix" function and its associated main matrix.
           i <- x$getinverse() # Retreives stored inverse matrix from the "makeCacheMatrix" function.
           if(!is.null(i)) {  # Logical statement to check if to see there was an inputed inverse matrix from the "makeCacheMatrix" function.
                     message("getting cached data") # Message indicating that the cacheSolve function is retrieving the inputed inverse matrix from the "makeCacheMatrix" function
